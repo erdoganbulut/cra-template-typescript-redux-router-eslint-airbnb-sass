@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'antd';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { decrement, increment } from '../../store/slices/counter.slice';
 
@@ -9,13 +10,13 @@ const Home = function () {
     <div className="Home">
       <p>Home works!</p>
       <div>
-        <button aria-label="Increment value" onClick={() => dispatch(increment())}>
+        <Button aria-label="Increment value" onClick={() => dispatch(increment())}>
           Increment
-        </button>
+        </Button>
         <span>{count}</span>
-        <button aria-label="Decrement value" onClick={() => dispatch(decrement())}>
+        <Button aria-label="Decrement value" onClick={() => dispatch(decrement())}>
           Decrement
-        </button>
+        </Button>
       </div>
     </div>
   );
